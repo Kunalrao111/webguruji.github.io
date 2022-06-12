@@ -44,6 +44,7 @@ nav .nav-links a{
     text-align: center;
     font-size: 40px;
     color: black;
+    margin-left: 150px;
 }
  
   body{
@@ -65,7 +66,6 @@ nav .nav-links a{
   
   .wrapper .sidebar h2{
     color: #fff;
-
     text-align: center;
     margin-bottom: 30px;
   }
@@ -80,6 +80,12 @@ nav .nav-links a{
   .wrapper .sidebar ul li a{
     color: #bdb8d7;
     display: block;
+  }
+  .wrapper .sidebar ul li p{
+    color: #e7e2ff;
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
   }
   
   .wrapper .sidebar ul li a .fas{
@@ -108,9 +114,4 @@ nav .nav-links a{
   .content ul li {
     list-style: disc;
     
-  }
-  @media (max-height: 500px){
-    .social_media{
-      display: none !important;
-    }
   }
