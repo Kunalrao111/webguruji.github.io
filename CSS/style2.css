@@ -39,6 +39,11 @@ nav .nav-links a{
     letter-spacing: 2px;
     /* word-spacing: 4px; */
     text-align: center;
+  
+}
+nav .nav-links a:hover{
+  color: #3da9fc;
+  text-decoration:none;
 }
 .title{
     text-align: center;
