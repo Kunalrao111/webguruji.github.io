@@ -43,6 +43,10 @@ nav .nav-links a{
     letter-spacing: 2px;
     /* word-spacing: 4px; */
 }
+nav .nav-links a:hover{
+    color: #3da9fc;
+    text-decoration:none;
+}
 .contant .heading p{
     font-size: 52px;
     font-weight: 600;
