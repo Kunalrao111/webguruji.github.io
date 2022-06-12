@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Images/image.png);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    width: 100%;
+    /* padding: 20px 0; */
+    text-align: center;
+    /* background-color: black; */
+}
+nav .logo{
+    width: 150px;
+    /* margin: 20px 0; */
+    padding-top: 15px;
+    padding-left: 45%;
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+nav .nav-links{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    padding: 10px;
+}
+nav .nav-links a{
+    text-decoration: none;
+    margin: 15px 30px;
+    color: white;
+    letter-spacing: 2px;
+    /* word-spacing: 4px; */
+}
+.contant .heading p{
+    font-size: 52px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    letter-spacing: 3px;
+}
+.contant .para p{
+    font-size: 20px;
+    font-weight: 500;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    line-height: 30px;
+}
+.contant .dot p{
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    line-height: 30px;
+}
+.social-media{
+    padding: 20px;
+    margin-top: 130px;
+    margin-right: 40px;
+}
+.social-media ul{
+    /* display: inline block; */
+    list-style: none;
+    float: right;
+}
+.social-media ul li{
+    display: inline-block;
+    padding: 5px;
+}
+.facebook{
+    height: 40px;
+    width: 40px;
+}
+.instagram{
+    height: 40px;
+    width: 40px;
+}.twitter{
+    height: 40px;
+    width: 40px;
+}.linkedin{
+    height: 40px;
+    width: 40px;
+}.github{
+    height: 40px;
+    width: 40px;
+}
+@media (max-height: 500px){
+    .social_media{
+      display: none !important;
+    }
+  }
