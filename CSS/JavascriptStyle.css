@@ -234,7 +234,7 @@ nav .nav-links a:hover{
   
 }
 hr{
-  background-color: #737373;;
+  background-color:#bdb8d7;
   height: 2px;
   width: 100%;
   border: none;
@@ -277,7 +277,7 @@ hr{
 .bi-facebook{
   width: 30px;
   height: 30px;
-  color:#737373;
+  color:#bdb8d7;
 }
 .bi-facebook:hover{
   color: rgb(74, 121, 216);
@@ -286,7 +286,7 @@ hr{
 .bi-instagram{
   width: 30px;
   height: 30px;
-  color:#737373;
+  color:#bdb8d7;
 }
 .bi-instagram:hover{
   color: rgb(188, 111, 154);
@@ -294,7 +294,7 @@ hr{
 .bi-linkedin{
   width: 30px;
   height: 30px;
-  color:#737373;
+  color:#bdb8d7;
 }
 .bi-linkedin:hover{
   color: rgb(74, 121, 216);
@@ -302,7 +302,7 @@ hr{
 .bi-github{
   width: 30px;
   height: 30px;
-  color:#737373;
+  color:#bdb8d7;
 }
 .bi-github:hover{
   color: white
@@ -310,7 +310,7 @@ hr{
 .bi-google{
   width: 30px;
   height: 30px;
-  color:#737373;
+  color:#bdb8d7;
 }
 .bi-google:hover{
   color: rgb(216, 74, 74);
