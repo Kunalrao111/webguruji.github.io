@@ -17,10 +17,9 @@
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    
-    
 }
 .but2{
+ .but2{
   width: 250px;
   height: 100px;
   border: none;
@@ -62,10 +61,25 @@
 } */
 
  .but2:hover{
+ /* .but2:hover{
     box-shadow: inset 250px 0 0 0 #bdb8d7;
     color: black;
+} */
+.firstif{
+    float: left;
 }
-
+.secndif{
+    float: right;
+}
+.para{
+    text-align: center;
+    background-color: #bdb8d7;
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
     </style>
 </head>
 <body>
@@ -84,27 +98,27 @@
             </div>
         </nav>
     </header>
+    <p class="para">1. Write a JavaScript function to convert the temperature value from Celsius to Fahrenheit. Assume that the temperature value is 100.</p>
     <div class="buton">
-        <!-- <div class="buton1"> -->
-            <button  class="but2">Code</button>
-        <!-- </div> -->
-        <!-- <div class="boton2"> -->
-            <button class="but2">Output</button>
-        <!-- </div> -->
+            <button type="submit" class="but2" id="but1" onclick="display()">Code</button>
+            <button type="submit" class="but2" id="but2" onclick="display1()">Output</button>
     </div>
-    <iframe src="/Pages/ques1.txt" frameborder="1" width="50%" height="700px" class="firstif">   
-    </iframe>
-    <iframe src="/Pages/2output.html" frameborder="1" width="50%" height="700px" class="secndif">
-    </iframe>
-    <!-- <div class="firstif">
-        <input type="submit" value="Code">
-        <iframe src="/Pages/ques1.txt" frameborder="1" width="50%" height="700px">
+        <iframe frameborder="1" width="50%" height="700px" class="firstif">   
         </iframe>
-    </div>
-    <div class="secndif">
-        <input type="submit" value="Output">
-        <iframe src="/Pages/2output.html" frameborder="1" width="50%" height="700px">
-        </iframe> -->
+        <iframe  frameborder="1" width="49.9%" height="700px" class="secndif">
+        </iframe>
     </div>
 </body>
 </html>
+<script>
+    function display(){
+        var x = document.getElementById("but1");
+        x=  '<iframe src="/Pages/ques2.txt" frameborder="1" width="49%" height="700px" class="secndif" float="left"></iframe><iframe frameborder="1" width="50%" height="700px" class="firstif" float="right"> ';
+        document.write(x);   
+    }
+    function display1(){
+        var y = document.getElementById("but2");
+        y = '<iframe src="/Pages/ques2.txt" frameborder="1" width="49%" height="700px" class="secndif"></iframe><iframe src="/Pages/2output.html" frameborder="1" width="50%" height="700px" class="firstif">';
+        document.write(y);
+    }
+</script>
