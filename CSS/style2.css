@@ -120,7 +120,7 @@ nav .nav-links a:hover{
     /* padding:45px 0 20px; */
     font-size:15px;
     line-height:24px;
-    color:#737373;  
+    color: #bdb8d7;  
     margin-bottom: 0px;
 }
 .footer-About{ 
@@ -179,7 +179,7 @@ nav .nav-links a:hover{
 }
 .footer-Categories ul li a{
   text-decoration: none;
-  color:#737373;
+  color: #bdb8d7;
 }
 .Quick-links{
   /* background-color: #414040;   */
@@ -213,7 +213,7 @@ nav .nav-links a:hover{
 }
 .Quick-links ul li a{
   text-decoration: none;
-  color:#737373;
+  color: #bdb8d7;
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -238,7 +238,7 @@ hr{
   margin-top: 10px;
 }
 .copyright-text a{
-  color:#737373;
+  color: #bdb8d7;
   text-decoration: none;
 }
 .copyright-text a:hover{
