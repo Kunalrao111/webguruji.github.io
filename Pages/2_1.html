@@ -36,10 +36,6 @@
     box-shadow: inset 250px 0 0 0 #bdb8d7;
     color: black;
 } */
-.mainif{
-    width: 100%;
-    height: 700px;
-}
 .firstif{
     float: left;
 }
@@ -71,14 +67,12 @@
             <!-- <input type="submit" value="submit" id="but1" onclick="display()"> -->
         <!-- </div> -->
         <!-- <div class="boton2"> -->
-            <button type="submit" class="but2" id="but2" onclick="display1()">Output</button>
+            <button class="but2">Output</button>
         <!-- </div> -->
     </div>
-    <iframe src="" frameborder="1"  class="mainif">
-        <iframe frameborder="1" width="50%" height="700px" class="firstif">   
-        </iframe>
-        <iframe  frameborder="1" width="50%" height="700px" class="secndif">
-        </iframe>
+    <iframe frameborder="1" width="50%" height="700px" class="firstif">   
+    </iframe>
+    <iframe frameborder="1" width="50%" height="700px" class="secndif">
     </iframe>
     <!-- <iframe src="/Pages/ques1.txt" frameborder="1" width="50%" height="700px" class="firstif">   
     </iframe>
@@ -97,15 +91,3 @@
     </div>
 </body>
 </html>
-<script>
-    function display(){
-        var x = document.getElementById("but1");
-        x=  '<iframe src="/Pages/ques2.txt" frameborder="1" width="50%" height="700px" class="secndif" float="left"></iframe><iframe frameborder="1" width="50%" height="700px" class="firstif" float="right"> ';
-        document.write(x);   
-    }
-    function display1(){
-        var y = document.getElementById("but2");
-        y = '<iframe src="/Pages/ques2.txt" frameborder="1" width="50%" height="700px" class="secndif"></iframe><iframe src="/Pages/2output.html" frameborder="1" width="50%" height="700px" class="firstif">';
-        document.write(y);
-    }
-</script>
