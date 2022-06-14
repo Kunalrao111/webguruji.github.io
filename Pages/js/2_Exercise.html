@@ -83,10 +83,10 @@
                 <p>Web&nbsp;Guruji</p>
             </div>
             <div class="nav-links">
-                <a href="../index1.html">Home</a>
-                <a href="../html.html">HTML</a>
-                <a href="">CSS</a>
-                <a href="../JavaScript.html">JAVASCRIPT</a>
+                <a href="/index1.html">Home</a>
+                <a href="/html.html">HTML</a>
+                <a href="/CSS.html">CSS</a>
+                <a href="/JavaScript.html">JAVASCRIPT</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
             </div>
@@ -97,9 +97,9 @@
             <button type="submit" class="but2" id="but1" onclick="display()">Code</button>
             <button type="submit" class="but2" id="but2" onclick="display1()">Output</button>
     </div>
-        <iframe frameborder="1" width="50%" height="700px" class="firstif">   
+        <iframe frameborder="1" width="50%" height="700px" class="firstif" name="jx1">   
         </iframe>
-        <iframe  frameborder="1" width="49.9%" height="700px" class="secndif">
+        <iframe  frameborder="1" width="49.9%" height="700px" class="secndif" name="jx2">
         </iframe>
     </div>
 </body>
@@ -107,7 +107,7 @@
 <script>
     function display(){
         var x = document.getElementById("but1");
-        x=  '<iframe src="/Pages/ques2.txt" frameborder="1" width="49%" height="700px" class="secndif" float="left"></iframe><iframe frameborder="1" width="50%" height="700px" class="firstif" float="right"> ';
+        x=  '<iframe src="/Pages/js/ques2.txt" frameborder="1" width="49%" height="700px" class="secndif" float="left"></iframe><iframe frameborder="1" width="50%" height="700px" class="firstif" float="right"> ';
         document.write(x);   
     }
     function display1(){
