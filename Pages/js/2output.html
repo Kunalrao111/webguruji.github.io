@@ -7,7 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Area of triangle</h2>
-    <p>Area of the triangle= 14.696938456699069</p>
+    <h1>Area of Triangle</h1>
+    Side1:
+    <input type="text" id="side1"><br><br>
+    Side2:
+    <input type="text" id="side2"><br><br>
+    Side3:
+    <input type="text" id="side3"><br><br>
+    <input type="button" value="Calculate" onclick="area()"><br><br>
+    Area:
+    <input type="text" id="area">
+    <script>
+        function area(){
+        var a=parseInt(document.getElementById("side1").value);
+        var b=parseInt(document.getElementById("side2").value);
+        var c=parseInt(document.getElementById("side3").value);
+        // By Heron's formula.
+        var s=(a+b+c)/2;
+        document.getElementById("area").value=(s*(s-a)*(s-b)*(s-c))**(1/2); 
+        }
+    </script>
 </body>
 </html>
