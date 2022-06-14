@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program50</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+        }
+        .main-container{
+            display: flex;
+            width:95%;
+            flex-wrap: wrap;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            justify-content: center;
+        }
+        .img{
+            height:250px;
+            width:300px;
+            background-image: url('../images/Edit_Water_Drops_0082.JPG');
+            background-size: cover;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Achievements</h1>
+    <div class="main-container">
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+    </div>
+</body>
+</html>
