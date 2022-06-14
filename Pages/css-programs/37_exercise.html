@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>37 Exercise</title>
+    <link rel="stylesheet" href="/CSS/JavascriptStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+   
+    <style>
+        
+.buton{
+    background-color: #bdb8d7;
+    height: 150px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+ .but2{
+  width: 250px;
+  height: 100px;
+  border: none;
+  color: white;
+  background-color: #594f8d;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #bdb8d7;
+  transition: ease-out 0.4s;
+  font-size: 2rem;
+  outline: none;
+  display: inline;
+  
+}
+.but2:hover{
+    box-shadow: inset 250px 0 0 0 #bdb8d7;
+    color: black;
+}
+.firstif{
+    float: left;
+}
+.secndif{
+    float: right;
+}
+.para{
+    text-align: center;
+    background-color: #bdb8d7;
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Web&nbsp;Guruji</p>
+            </div>
+            <div class="nav-links">
+                <a href="/index1.html">Home</a>
+                <a href="/html.html">HTML</a>
+                <a href="/CSS.html">CSS</a>
+                <a href="/JavaScript.html">JAVASCRIPT</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <p class="para">1. Write a JavaScript function to convert the temperature value from Celsius to Fahrenheit. Assume that the temperature value is 100.</p>
+    <div class="buton">
+            <button type="submit" class="but2" id="but1" onclick="display()">Code</button>
+            <button type="submit" class="but2" id="but2" onclick="display1()">Output</button>
+    </div>
+        <iframe frameborder="1" width="50%" height="700px" class="firstif" name="jx1">   
+        </iframe>
+        <iframe  frameborder="1" width="49.9%" height="700px" class="secndif" name="jx2">
+        </iframe>
+    </div>
+</body>
+</html>
+<script>
+    function display(){
+        var x = document.getElementById("but1");
+        x=  '<iframe src="/Pages/css-programs/37.txt" frameborder="1" width="49%" height="700px" class="secndif" float="left"></iframe><iframe frameborder="1" width="50%" height="700px" class="firstif" float="right"> ';
+        document.write(x);   
+    }
+    function display1(){
+        var y = document.getElementById("but2");
+        y = '<iframe src="/Pages/css-programs/37.txt" frameborder="1" width="49%" height="700px" class="secndif" float="left"></iframe><iframe src="/Pages/css-programs/37output.html" frameborder="1" width="50%" height="700px" class="firstif"></iframe>';
+        document.write(y);
+    }
+</script>
