@@ -9,7 +9,7 @@ body{
     height: 100vh;
     background-image: url(/Images/image.png);
     background-position: center;
-    background-size: cover;
+    background-size:cover;
 }
 nav{
     width: 100%;
