@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>SQL Query</title>
+    <link rel="stylesheet" type="text/css" href="../css/sqlpagescss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Web&nbsp;Guruji</p>
+            </div>
+            <div class="nav-links">
+                <a href="../home.html">Home</a>
+                <a href="../sql.html">SQL</a>
+                <a href="../plsql.html">PL/SQL</a>
+                <a href="../about.html">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="title">SQL BASIC QUERIES</h1>
+    <div class="wrapper">
+
+        <div class="content">
+            <p>Now, lets's focus on some SQL basic commands that one should know when they start learning about SQL.
+                There are many queries that seem to be basic, but I have covered few that are really essential for a
+                beginner. For explaining all the query I have considered the Student table, which I will be using.</p>
+            <br>
+            <h2>Select</h2>
+            <p>It is the most basic SQL query one can use for manipulating a database. The select command is used to
+                select the data from the database and display it to the user.</p>
+            <strong> <i> Syntax: </i></strong>
+            <div class="syntax">
+                <p>Select column 1, column 2…..column N <br>
+                    From Table; </p><br>
+            </div>
+            <strong> <i> Example: </i></strong>
+            <div class="syntax">
+                <p>Select name From Student;</p>
+            </div>
+            <p>The above example will display all the names from the student table. If we want to display all the fields
+                in the table then we have to use *(Star) operator. This will display the entire table.</p>
+            <strong> <i> Example: </i></strong>
+            <div class="syntax">
+                <p>Select * From Student;</p>
+            </div>
+            <p>If we want to display certain field without any duplicates then we use the DISTINCT keyword along with
+                the select command. </p>
+            <strong> <i> Example: </i></strong>
+            <div class="syntax">
+                <p>Select DISTINCT FName From Student;</p>
+            </div>
+            <br><br>
+            <h2>WHERE</h2>
+            <p>If we need only certain records from the table then we use the where clause. Where clause acts as a
+                Filtering mechanism. Under the Where section we need to specify certain conditions, only if those
+                conditions are met the records will be extracted.</p>
+            <strong> <i> Syntax: </i></strong>
+            <div class="syntax">
+                <p>SELECT column1, column2, ...column N <br>
+                    FROM table_name <br>
+                    WHERE condition;</p><br>
+            </div>
+            <strong> <i> Example: </i></strong>
+            <div class="syntax">
+                <p>SELECT FName FROM Students <br>
+                    WHERE City='Delhi';</p>
+            </div>
+            <br><br>
+            <h2>AND, OR, NOT</h2>
+            <p>If we need to add two or more conditions in the where clause then we can use the above-mentioned
+                operators. These keywords will add more complexity to the query. </p>
+            <ul>
+                <li>AND Operator: This operator displays a record if all the conditions separated by AND are TRUE. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE condition1 AND condition2 AND condition3 ...;</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT * FROM Student <br>
+                            WHERE FName='John' AND Lname='Doe';</p>
+                    </div>
+                </li>
+                <li>OR Operator: This operator displays a record if any of the conditions separated by OR is TRUE. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE condition1 OR condition2 OR condition3 ...;</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT * FROM Student <br>
+                            WHERE FName='John' OR Lname='Doe';</p>
+                    </div>
+                </li>
+                <li>NOT Operator: This operator displays a record if the condition/conditions are NOT TRUE. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE NOT condition;</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT * FROM Student <br>
+                            WHERE NOT Lname='Doe';</p>
+                    </div>
+                </li>
+            </ul>
+
+            <br><br>
+            <h2>INSERT INTO</h2>
+            <p>If we want to insert any new record or data into a table then we can use the INSERT query. We can use the
+                Insert into in two ways:</p>
+            <ul>
+                <li>Here we specify the column names for which we need to insert the record. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>INSERT INTO table_name (column1, column2,...) <br>
+                            VALUES (value1, value2, value3, ...);</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>Insert into Student(studentID, FName, LName, Address, City, Marks) <br>
+                            Values (101, 'JHON','DOE','#21, MG ROAD', 'Bengaluru', 550);</p>
+                    </div>
+                </li>
+                <li>In this, we don't have to specify the columns of the table. But make sure the order of the values is
+                    in the same order as the columns in the table. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>INSERT INTO table_name <br>
+                            VALUES (value1, value2, value3, ...);</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>INSERT INTO Student VALUES (102, 'Alex','Cook','#63, Brigade ROAD, NEAR HAL', 'Bengaluru',
+                            490);
+                        </p>
+                    </div>
+                    If we want to insert into specific columns then we need to follow the below method. <br>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>INSERT INTO Student(studentID, FName) VALUES (103, 'Mike');</p><br>
+                    </div>
+                </li>
+            </ul>
+            <br><br>
+            <h2>AGGREGATE FUNCTIONS</h2>
+            <p>An aggregate function is a function where the values of multiple rows are grouped together as input on
+                certain criteria and a single value is returned. We often use aggregate functions with the GROUP BY and
+                HAVING clauses of the SELECT statement. We will be discussing GROUP BY, ORDER BY and HAVING later in
+                this section. Some of the Aggregate functions are COUNT, SUM, AVG, MIN, MAX.</p><br>
+            <p>Let's discuss each one by one. </p>
+            <ol>
+                <li>COUNT(): This function returns the number of rows that match specified criteria. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT COUNT(column_name) <br>
+                            FROM table_name <br>
+                            WHERE condition;</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT COUNT (studentID) <br>
+                            FROM Student;
+                        </p>
+                    </div>
+                </li>
+                <li>AVG(): This function returns the average value of a numeric column. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT AVG(column_name) <br>
+                            FROM table_name <br>
+                            WHERE condition; </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT AVG(Marks) <br>
+                            FROM Student;
+                        </p>
+                    </div>
+                </li>
+                <li>SUM(): This function returns the total sum of a numeric column. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT SUM(column_name) <br>
+                            FROM table_name <br>
+                            WHERE condition; </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT SUM(Marks) <br>
+                            FROM Student;
+                        </p>
+                    </div>
+                </li>
+                <li>MIN(): This function returns the smallest value of the selected column. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT MIN(column_name) <br>
+                            FROM table_name <br>
+                            WHERE condition; </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT MIN(Marks) AS LeastMarks <br>
+                            FROM Student;
+                        </p>
+                    </div>
+                </li>
+                <li>MAX(): This function returns the largest value of the selected column. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT MAX(column_name) <br>
+                            FROM table_name <br>
+                            WHERE condition; </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT MAX(Marks) AS HighestMarks <br>
+                            FROM Student;
+                        </p>
+                    </div>
+                    Note: We have used aliasing here (AS new_name), Which we will be discussing in a short while.
+                </li>
+            </ol>
+
+
+
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>WEB GURUJI</h3>
+            <p><i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. WebGuruji focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 WEBGURUJI. designed by <span>KUNAL RAO</span></p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

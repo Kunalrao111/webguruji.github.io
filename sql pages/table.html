@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Table</title>
+    <link rel="stylesheet" type="text/css" href="../css/sqlpagescss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Web&nbsp;Guruji</p>
+            </div>
+            <div class="nav-links">
+                <a href="../home.html">Home</a>
+                <a href="../sql.html">SQL</a>
+                <a href="../plsql.html">PL/SQL</a>
+                <a href="../about.html">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="title">Table</h1>
+    <div class="wrapper">
+
+        <div class="content">
+            <p>
+                A table in a database is nothing but a collection of data in a tabular way. It consists of <u>
+                    columns</u> and <u></u>rows</u>. The table contains data elements also known as values using a model
+                of vertical columns and horizontal rows. The point of intersection of a row and a column is called a<u>
+                    CELL</u>. A table can have any number of rows but should have a specified number of columns.
+            </p>
+            <img src="../Images/table1.png" alt="">
+            <br>
+            <h2>Create a Table</h2>
+            <br>
+            <p>So to create a table in database we use the following SQL query</p>
+            <div class="syntax">
+                <p> CREATE TABLE table_name (<br>
+                    column1 datatype,<br>
+                    column2 datatype,<br>
+                    column3 datatype, ....); </p><br>
+            </div>
+            <p>Here the keyword Create Table is used to say to a database that we are going to create a new table. Then
+                we need to mention the table name. This name has to be unique. SQL is case insensitive, but the data
+                stored inside the table will be case sensitive. We add the columns inside the open and close brackets.
+                We specify each column with a certain data type.</p>
+            <b> Example: </b>
+            <div class="syntax">
+                <p> CREATE TABLE Student (<br>
+                    studentID int,<br>
+                    FName varchar(25),<br>
+                    LName varchar(25),<br>
+                    Address varchar(50),<br>
+                    City varchar(15),<br>
+                    Marks int);<br></p><br>
+            </div>
+            <p>We have created a table with the name Student and added a few parameters into the table. This is how we
+                can create a table using SQL.</p>
+            <img src="../Images/tables1.png" alt="">
+            <br>
+            <h2>Drop a Table</h2>
+            <br>
+            <p>If we want to delete the entire table with all its data then we have to use the DROP command</p>
+            <strong> <u> Syntax: </u></strong>
+            <div class="syntax">
+                <p>DROP TABLE table_name;</p><br>
+            </div>
+            <strong> <u> Example: </u></strong>
+            <div class="syntax">
+                <p>DROP TABLE Student;</p><br>
+            </div>
+            <img src="../Images/tables2.png" alt="">
+            <br>
+            <h2>Truncate the Table</h2>
+            <p>What if we wanted to delete only the data inside the table but not the table itself? Then we have to use
+                the Truncate Query.</p>
+            <strong> <u> Syntax: </u></strong>
+            <div class="syntax">
+                <p>TRUNCATE TABLE table_name;</p><br>
+            </div>
+            <strong> <u> Example: </u></strong>
+            <div class="syntax">
+                <p>TRUNCATE TABLE Student;</p><br>
+            </div>
+            <p>When we execute the above query the data inside the table will be deleted but the table remains.</p>
+            <br><br>
+            <p>We can increase the accuracy and reliability of data that goes into the database through a table with the
+                help of the concept called <b><i> SQL CONSTRAINTS</b></i>. These constraints make sure that there is no
+                violation in
+                terms of a transaction of data if found then the action will be terminated. The main use of constraints
+                is to limit the type of data that can go into a table. </p>
+            <br>
+            <h3>Some Most Used Constraints</h3>
+            <br>
+            <ul>
+                <li><i> DEFAULT</i> - When no value is specified then a set of default values for a column is added</li>
+                <li><i>NOT NULL </i>- This makes sure that a NULL value will not be stored in a column</li>
+                <li><i>UNIQUE</i> - The values entered to the table will be unique if this constraint is applied</li>
+                <li><i>INDEX</i> - This is used to create and also retrieve data from the database</li>
+                <li><i>PRIMARY KEY</i> - It is the candidate key that is selected to uniquely identify a tuple in a
+                    relation.</li>
+                <li><i>FOREIGN KEY</i> - A foreign key is a set of one or more columns in the child table whose values
+                    are required to match with corresponding columns in the parent table</li>
+                <li><i>CHECK </i>- If we want to satisfy a specific condition in a column then we use CHECK constraint
+                </li>
+            </ul>
+
+
+        </div>
+
+
+
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>WEB GURUJI</h3>
+            <p><i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. WebGuruji focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 WEBGURUJI. designed by <span>KUNAL RAO</span></p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

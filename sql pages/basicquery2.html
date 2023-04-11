@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>SQL Query</title>
+    <link rel="stylesheet" type="text/css" href="../css/sqlpagescss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Web&nbsp;Guruji</p>
+            </div>
+            <div class="nav-links">
+                <a href="../home.html">Home</a>
+                <a href="../sql.html">SQL</a>
+                <a href="../plsql.html">PL/SQL</a>
+                <a href="../about.html">About</a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="title">SQL BASIC QUERIES</h1>
+    <div class="wrapper">
+
+        <div class="content">
+            <h2>GROUP BY, HAVING, ORDER BY</h2>
+            <p>These keywords (GROUP BY, HAVING, ORDER BY) are used in a query to increase the functionality. Each one
+                of them has a specific role to play.</p>
+            <br>
+            <ul>
+                <li>GROUP BY: This functionality is used to arrange a similar type of data into a group. For instance,
+                    if the column in a table consists of similar data or value in different rows then we can use GROUP
+                    BY function to group the data. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE condition <br>
+                            GROUP BY column_name(s);</p><br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT COUNT(StudentID), Fname <br>
+                            FROM Student <br>
+                            GROUP BY Fname; <br>
+                        </p>
+                    </div>
+                </li>
+                <li>HAVING: This clause is used to place conditions where we need to decide which group will be the part
+                    of final result-set. Also, we can not use the aggregate functions like SUM(), COUNT() etc. with
+                    WHERE clause. At such situation, we have to use HAVING condition. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE condition <br>
+                            GROUP BY column_name(s) <br>
+                            HAVING condition; </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT Fname, SUM(Marks) <br>
+                            FROM Student <br>
+                            GROUP BY Fname <br>
+                            HAVING SUM(Marks)>500;
+                        </p>
+                    </div>
+                </li>
+                <li>ORDER BY: This keyword is used to sort the result-set in ascending or descending order. The ORDER BY
+                    keyword shall sort the records in ascending order by default. If we want to sort the records in
+                    descending order, use the DESC keyword. <br>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            ORDER BY column1, column2, ... ASC|DESC;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT COUNT(StudentID), City <br>
+                            FROM Student <br>
+                            GROUP BY City <br>
+                            ORDER BY COUNT(StudentID) DESC;
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <br><br>
+            <h2>NULL VALUES</h2>
+            <p>In SQL we use the NULL term to represent a missing value. A NULL value in a table is a value appears to
+                be blank. A field with a NULL value is a field with no value in SQL. Keep note that a NULL value is
+                different than a zero value or a field that contains spaces.</p>
+            <br>
+            <p>To check the null value we are not supposed to use the operators such as >, <,=etc. It's not supported in
+                    SQL. We have special keywords i.e, IS NULL and IS NOT NULL.</p>
+                    <h3>IS NULL</h3>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_names <br>
+                            FROM table_name <br>
+                            WHERE column_name IS NULL;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>Select Fname, Lname <br>
+                            From Student <br>
+                            Where Marks IS NULL; <br>
+                        </p>
+                    </div>
+                    <br>
+                    <h3>IS NOT NULL</h3>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_names <br>
+                            FROM table_name <br>
+                            WHERE column_name IS NOT NULL;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>Select Fname, Lname <br>
+                            From Student <br>
+                            Where Marks IS NOT NULL; <br>
+                        </p>
+                    </div>
+                    <br><br>
+                    <h2>UPDATE and DELETE</h2>
+                    <br>
+                    <p><strong>UPDATE:</strong> The Update command is used to modify rows in a table. The update command
+                        can be used to update a single field or multiple fields at the same time.</p>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>UPDATE table_name <br>
+                            SET column1 = value1, column2 = value2,... <br>
+                            WHERE condition;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>UPDATE Student <br>
+                            SET Fname = 'Robert', Lname= 'Wills' <br>
+                            WHERE StudentID = 101; <br>
+                        </p>
+                    </div>
+                    <p><strong>DELETE:</strong> The SQL DELETE command is used to delete rows that are no longer
+                        required from the database tables. It deletes the whole row from the table.</p>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>DELETE FROM table_name <br>
+                            WHERE condition;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>DELETE FROM Student <br>
+                            WHERE FName='Robert'; <br>
+                        </p>
+                    </div>
+                    <p>There is a special case here, if we need to delete the entire table records then we have to
+                        specify the table name. The data of that particular table will be divided.</p>
+                    <br>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>Delete From Student; <br>
+                        </p>
+                    </div>
+
+                    <p><i>One of the major questions that arise now is: What is the difference between DELETE and
+                            TRUNCATE command? The answer is simple. DELETE is a DML command whereas TRUNCATE is DDL
+                            command, also DELETE deletes records one by one and makes an entry for each and every
+                            deletion in the transaction log, whereas TRUNCATE de-allocates pages and makes an entry
+                            for deallocation of pages in the transaction log.</i></p>
+
+                    <br><br>
+                    <h2>IN and BETWEEN operators</h2>
+                    <br>
+                    <p><strong>IN:</strong> IN operator is used to specify multiple values inside the WHERE clause. It
+                        acts as a short for multiple OR.</p>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE column_name IN (value1, value2, ...);
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT StudentID, Fname, Lname <br>
+                            FROM Student <br>
+                            WHERE City IN ('Delhi', 'Goa', 'Pune','Bengaluru'); <br>
+                        </p>
+                    </div>
+
+                    <br>
+                    <p><strong>BETWEEN:</strong>BETWEEN operator will select a particular value within the specified
+                        range. It
+                        is compulsory to add the beginning and the end value (Range).</p>
+                    <strong> <i> Syntax: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE column_name BETWEEN value1 AND value2;
+                        </p> <br>
+                    </div>
+                    <strong> <i> Example: </i></strong>
+                    <div class="syntax">
+                        <p>SELECT StudentID, Fname, Lname FROM Student <br>
+                            WHERE Marks BETWEEN 400 AND 500; <br>
+                        </p>
+                    </div>
+                    <br><br>
+                    <h2>Aliases in SQL</h2>
+                    <p>Alias is a process of giving a table or a column a temporary name so that it helps when the query
+                        is complex. It increases the readability of the query. This renaming is temporary and the table
+                        name does not change in the original database. We can alias a column or a table. Below I have
+                        mentioned both syntaxes.</p>
+                        <strong> <i> The syntax for Column Aliasing: </i></strong>
+                        <div class="syntax">
+                            <p>SELECT column_name AS alias_name <br>
+                                FROM table_name;
+                            </p> <br>
+                        </div>
+                        <strong> <i> Example: </i></strong>
+                        <div class="syntax">
+                            <p>SELECT CustomerID AS ID, CustomerName AS Customer <br>
+                                FROM Customers; <br>
+                            </p>
+                        </div>
+                        <br> <strong> <i> Syntax for Table Aliasing: </i></strong>
+                        <div class="syntax">
+                            <p>SELECT column_name(s) FROM table_name AS alias_name;
+                            </p> <br>
+                        </div>
+                        <strong> <i> Example: </i></strong>
+                        <div class="syntax">
+                            <p>SELECT S.Fname, S.LName
+                                FROM Student as S<br>
+                            </p>
+                        </div>
+                    
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>WEB GURUJI</h3>
+            <p><i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. WebGuruji focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 WEBGURUJI. designed by <span>KUNAL RAO</span></p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
